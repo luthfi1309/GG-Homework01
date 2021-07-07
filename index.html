@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- title -->
+        <title>Music Player</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script src="./assets/js/app.js"></script>
+    </head>
+    <body>
+        <!-- h1 -->
+        <h1>Create Playlist</h1>
+        <!-- form -->
+        <form>
+            <label for="input-title"></label><br />
+            <input id="input-title" placeholder="Title" /><br />
+            <label for="input-description">Description</label><br />
+            <input id="input-description" placeholder="Description" /><br />
+            <button id="btn-submit" type="button" onclick="test()">Submit</button>
+            <button id="btn-submit" type="button">Submit</button>
+        </form>
+
+        <div id="card">
+            <div id="card-image">
+                <div id="card-back-image"></div>
+            <!-- Image -->
+            <img
+                src="./assets/images/coldplay.jpeg"
+                alt="coldplay"
+                id="image"
+                width="250px"
+            />
+        </div>
+
+        <div id="card-description">
+            <!-- artist -->
+            <h4 id="card-description-albums">Albums</h4>
+
+            <!-- title -->
+            <h2 id="card-description-title">Title</h2>
+
+            <!-- album -->
+            <h4 id="card-description-artist">Artist</h4>
+            <button id="card-description-button">Button</button>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/js/app.js"></script>
+</html>
