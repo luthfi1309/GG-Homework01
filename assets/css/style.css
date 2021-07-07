@@ -1,10 +1,12 @@
 h1,
 label {
-    margin-left: 20px;
+    border: 2px solid #1158C7;
+    padding: 15px;
+    background-color: #1158C7;
+    
 }
 
-#input-title,
-#input-description {
+#input-title, #input-description {
     width: 200px;
     padding: 8px;
     margin-top: auto;
