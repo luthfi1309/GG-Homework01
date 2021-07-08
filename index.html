@@ -7,7 +7,6 @@
         <!-- title -->
         <title>Music Player</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <script src="./assets/js/app.js"></script>
     </head>
     <body>
         <!-- h1 -->
@@ -51,4 +50,30 @@
         </div>
     </body>
     <script src="./assets/js/app.js"></script>
+    <script>
+        const loadData = (callback) => {
+            const request = new XMLHttpRequest();
+
+            request.addEventListener('readystatechange', () => {
+            if(request.readyState === 4 && request.status === 200){
+                callback(undefined, request.responseText);
+            } else if(request.readyState === 4){
+                callback('could not fetch data', undefined);
+            }
+            });
+
+            request.open('GET', 'https://gist.githubusercontent.com/aryapradipta9/e6492383477803b233916e01f36d5465/raw/66942c739d66d3774303f84071696aa865a07077/single-sample.json');
+            request.send();
+        };
+
+        loadData((err, data) => {
+            console.log('callback fired')
+            if(err) {
+                alert(err);
+            } else {
+                console.log(data);
+            }
+           
+        });
+    </script>
 </html>
